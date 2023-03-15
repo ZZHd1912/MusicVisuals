@@ -1,0 +1,40 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-linux-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-linux-armv6hf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.base.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.fxml.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/sqlite-jdbc-3.23.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-linux-aarch64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-macosx-universal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-windows-i586.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-linux-aarch64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/minim.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-linux-armv6hf.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-windows-i586.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-linux-i586.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-macosx-universal.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.swing.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/tritonus_share.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/mp3spi1.9.5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jogl-all-natives-windows-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-linux-i586.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-linux-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.web.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jsminim.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.graphics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.media.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/jl1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/gluegen-rt-natives-windows-amd64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/javafx.controls.jar!/" />
+      <root url="jar://$PROJECT_DIR$/java/lib/tritonus_aos.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
