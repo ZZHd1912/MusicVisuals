@@ -28,7 +28,16 @@ The effect is **as follows**, the effect is as follows, the circle in the middle
 |![An image](images/circle_render_1.jpg)|![An image](images/circle_render_2.jpg)|![An image](images/circle_render_3.jpg)|
 | :-----:| :----: | :----:|
 
+### 3-19 BeatDetect function is used
+In the following code, I try to use the library function to get the beat of the music. By adjusting the parameter size of **setSensitivity()** to get the beat of the music successfully.
+```java
+BeatDetect beat;
+beat = new BeatDetect(cv.getFrameSize(), cv.getSampleRate());
+// beat = new BeatDetect();
+beat.detectMode(BeatDetect.SOUND_ENERGY);
+beat.setSensitivity(300);//I recommend a size between 200 and 500.
 
+```
 
 
 # Markdown Tutorial

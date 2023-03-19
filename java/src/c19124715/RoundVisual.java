@@ -17,6 +17,10 @@ public class RoundVisual {
         this.cv = cv;
         x = cv.width/2;
         y = cv.height/2;
+        beat = new BeatDetect(cv.getFrameSize(), cv.getSampleRate());
+        // beat = new BeatDetect();
+        beat.detectMode(BeatDetect.SOUND_ENERGY);
+        beat.setSensitivity(200);
     }
 
     public void render()
@@ -43,13 +47,21 @@ public class RoundVisual {
         // System.out.print(radius+"  ");
         cv.endShape(PApplet.CLOSE);
         cv.resetMatrix();
-
+        
+        if (beat != null){
+            beat.detect(cv.getAudioBuffer());
+            // 如果检测到了节拍，打印出当前时间戳
+            if (beat.isOnset()) {
+                System.out.println(cv.millis());
+            }
+        }
 
         // 根据速度改变球的大小
         size += speed;
         if (size > 250 || size < 180) {
             speed = -speed; // 碰到边界反弹
-            if (speed >= 0) {
+            if (speed >= 0)
+            {
                 colorValue = speed >= 0 ? (int) (cv.random(0, 255)) : colorValue; // 随机改变颜色
                 // speed = amp;
                 speed = PApplet.map(cv.getSmoothedAmplitude(), 0, 1, (float) 1.5, 30);  //根据振幅改变速度
