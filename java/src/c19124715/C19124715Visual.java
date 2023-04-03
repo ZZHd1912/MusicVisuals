@@ -6,7 +6,7 @@ import processing.core.PImage;
 public class C19124715Visual extends Visual{
 
     RoundVisual rv;
-
+    WaveVisual wv;
     int mode = 1;
 
     public void keyPressed()
@@ -35,11 +35,11 @@ public class C19124715Visual extends Visual{
         // loadAudio("heroplanet.mp3");   
         // Call this instead to read audio from the microphone
 //         startListening();
-        loadAudio("heroplanet.mp3");
+        loadAudio("Havana.mp3");
         smooth(); // 平滑处理
         colorMode(HSB);
         rv = new RoundVisual(this);
-
+        wv = new WaveVisual(this);
 
     }
 
@@ -56,6 +56,9 @@ public class C19124715Visual extends Visual{
         switch (mode) {
             case 1:
                 rv.render();
+                break;
+            case 2:
+                wv.render();
                 break;
             default:
                 rv.render();

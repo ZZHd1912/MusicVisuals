@@ -30,7 +30,7 @@ The effect is **as follows**, the effect is as follows, the circle in the middle
 
 ### 3-19 BeatDetect function is used
 In the following code, I try to use the library function to get the beat of the music. By adjusting the parameter size of **setSensitivity()** to get the beat of the music successfully.
-```java
+```Java
 BeatDetect beat;
 beat = new BeatDetect(cv.getFrameSize(), cv.getSampleRate());
 // beat = new BeatDetect();
@@ -38,7 +38,16 @@ beat.detectMode(BeatDetect.SOUND_ENERGY);
 beat.setSensitivity(300);//I recommend a size between 200 and 500.
 
 ```
+### 4-3 A new module for visualization
+- some optimizations and bugs fixed.
+- The implementation of a new idea.
+- Currently thinking of ways to integrate strong beats into visual displays.
+- Added a new music with a stronger rhythm.
 
+|![An image](images/wave_render_1.jpg)|![An image](images/wave_render_2.jpg)|![An image](images/wave_render_3.jpg)|
+| :-----:| :----: | :----:|
+
+ <font size=2>BTW I don't think the effect is good ：E</font>
 
 # Markdown Tutorial
 
