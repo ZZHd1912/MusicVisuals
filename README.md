@@ -13,9 +13,12 @@ Student Number: d19124715
 
 # Description of the assignment
 
+
 # Instructions
 
+
 # How it works
+
 
 # What I am most proud of in the assignment
 
@@ -38,63 +41,29 @@ beat.detectMode(BeatDetect.SOUND_ENERGY);
 beat.setSensitivity(300);//I recommend a size between 200 and 500.
 
 ```
-### 4-3 A new module for visualization
+### 4-3 A new module(Time domain graph) for visualization
 - some optimizations and bugs fixed.
-- The implementation of a new idea.
+- The implementation of a new idea —— **<u>*parallel shift of the time domain graph*</u>.**
 - Currently thinking of ways to integrate strong beats into visual displays.
-- Added a new music with a stronger rhythm.
+- Added a new music (mp3) with a stronger rhythm.
 
 |![An image](images/wave_render_1.jpg)|![An image](images/wave_render_2.jpg)|![An image](images/wave_render_3.jpg)|
 | :-----:| :----: | :----:|
 
  <font size=2>BTW I don't think the effect is good ：E</font>
 
+### 4-15 Added a new module(cube drop) and optimized several old modules
+
+- Frequency domain graphs with 10 bins
+- Cubes will randomly drop!
+- *Plan to make a small game —— catch the cubes！*
+
+The effect is as follows.
+
+|![An image](images/drop_render_1.jpg)|![An image](images/drop_render_2.jpg)|![An image](images/drop_render_3.jpg)|
+| :-----:| :----: | :----:|
+
 # Markdown Tutorial
-
-This is *emphasis*
-
-This is a bulleted list
-
-- Item
-- Item
-
-This is a numbered list
-
-1. Item
-1. Item
-
-This is a [hyperlink](http://bryanduggan.org)
-
-# Headings
-## Headings
-#### Headings
-##### Headings
-
-This is code:
-
-```Java
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
-
-So is this without specifying the language:
-
-```
-public void render()
-{
-	ui.noFill();
-	ui.stroke(255);
-	ui.rect(x, y, width, height);
-	ui.textAlign(PApplet.CENTER, PApplet.CENTER);
-	ui.text(text, x + width * 0.5f, y + height * 0.5f);
-}
-```
 
 This is an image using a relative URL:
 

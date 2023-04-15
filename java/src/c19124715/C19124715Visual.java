@@ -7,6 +7,7 @@ public class C19124715Visual extends Visual{
 
     RoundVisual rv;
     WaveVisual wv;
+    TestVisual tv;
     int mode = 1;
 
     public void keyPressed()
@@ -35,12 +36,13 @@ public class C19124715Visual extends Visual{
         // loadAudio("heroplanet.mp3");   
         // Call this instead to read audio from the microphone
 //         startListening();
-        loadAudio("Havana.mp3");
+//        loadAudio("Havana.mp3");
+        loadAudio("heroplanet.mp3");
         smooth(); // 平滑处理
         colorMode(HSB);
         rv = new RoundVisual(this);
         wv = new WaveVisual(this);
-
+        tv = new TestVisual(this);
     }
 
     public void draw() {
@@ -60,8 +62,12 @@ public class C19124715Visual extends Visual{
             case 2:
                 wv.render();
                 break;
+            case 3:
+                tv.render();
+                break;
             default:
                 rv.render();
+
         }
 
 
