@@ -2,7 +2,7 @@ package c19124715;
 
 import processing.core.PApplet;
 
-public class TestVisual {
+public class TestVisual extends Render{
     C19124715Visual cv;
     int cut = 30;
     boolean[] isFall;
@@ -19,7 +19,7 @@ public class TestVisual {
         vy =  new float[cv.getBands().length];
         gap = cv.width / (float) cv.getBands().length;
     }
-
+    @Override
     public void render()
     {
         cv.noStroke();

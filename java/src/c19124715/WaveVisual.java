@@ -2,7 +2,7 @@ package c19124715;
 
 import processing.core.*;
 
-public class WaveVisual{
+public class WaveVisual extends Render{
 
     float cy = 0;
     C19124715Visual cv;
@@ -15,7 +15,7 @@ public class WaveVisual{
         vert = new float[this.cv.width];
         System.out.println(vert.length);
     }
-
+    @Override
     public void render()
     {
         for (int i = vert.length - 1; i > 0; i--)

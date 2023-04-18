@@ -4,7 +4,7 @@ import ddf.minim.analysis.BeatDetect;
 import ddf.minim.analysis.FFT;
 import processing.core.*;
 
-public class RoundVisual {
+public class RoundVisual extends Render{
     C19124715Visual cv;
     float x, y; // 球的位置
     float size = 180; // 球的大小
@@ -22,7 +22,7 @@ public class RoundVisual {
         beat.detectMode(BeatDetect.SOUND_ENERGY);
         beat.setSensitivity(500);
     }
-
+    @Override
     public void render()
     {
         cv.translate(x, y);  // 将坐标系移动到屏幕中心
