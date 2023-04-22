@@ -4,11 +4,12 @@ import ie.tudublin.*;
 import processing.core.PImage;
 
 public class C19124715Visual extends Visual{
-
+    Render[] render;
     RoundVisual rv;
     WaveVisual wv;
-    TestVisual tv;
+    DropVisual tv;
     int mode = 1;
+    int move = 0;
 
     public void keyPressed()
     {
@@ -22,6 +23,10 @@ public class C19124715Visual extends Visual{
             mode = 2;
         }else if (key == '3'){
             mode = 3;
+        }else if (key == 'a'){
+            move = 1;
+        }else if (key == 'd'){
+            move = 2;
         }
     }
 
@@ -36,13 +41,17 @@ public class C19124715Visual extends Visual{
         // loadAudio("heroplanet.mp3");   
         // Call this instead to read audio from the microphone
 //         startListening();
-//        loadAudio("Havana.mp3");
-        loadAudio("heroplanet.mp3");
+        loadAudio("Havana.mp3");
+//        loadAudio("heroplanet.mp3");
         smooth(); // 平滑处理
         colorMode(HSB);
-        rv = new RoundVisual(this);
-        wv = new WaveVisual(this);
-        tv = new TestVisual(this);
+        // rv = new RoundVisual(this);
+        // wv = new WaveVisual(this);
+        // tv = new TestVisual(this);
+        render = new Render[3];
+        render[0] = new RoundVisual(this);
+        render[1] = new WaveVisual(this);
+        render[2] = new DropVisual(this);
     }
 
     public void draw() {
@@ -53,23 +62,25 @@ public class C19124715Visual extends Visual{
         } catch(VisualException e) {
             e.printStackTrace();
         }
-        calculateFrequencyBands(); 
-        calculateAverageAmplitude(); 
+        calculateFrequencyBands();
+        calculateAverageAmplitude();
         switch (mode) {
             case 1:
-                rv.render();
+                // rv.render();
+                render[0].render();
                 break;
             case 2:
-                wv.render();
+                // wv.render();
+                render[1].render();
                 break;
             case 3:
-                tv.render();
+                // tv.render();
+                render[2].render();
                 break;
             default:
-                rv.render();
-
+                // rv.render();
+                render[0].render();
         }
-
 
     }
     
