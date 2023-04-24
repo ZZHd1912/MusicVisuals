@@ -2,7 +2,7 @@
 
 Name: Zihao Zhao
 
-Student Number: C19124715
+Student Number: D19124715
 
 <!--## Instructions
 - Fork this repository and use it a starter project for your assignment
@@ -17,15 +17,16 @@ This is the youtube video link:xxx
 
 # Description of the assignment
 ## What I achieve:
-1. Use version control tool (git) to independently complete this project
-2. Use polymorphism and inheritance
+1. Use version control tool (**<u>Git</u>**) to independently complete this project
+2. Use <u>**polymorphism**</u> and **<u>inheritance</u>**
 3. Use Minim library to process music and Processing library for visualization
-4. Three different types of rendering effects
-5. Visualization effects based on rhythm and beat
+4. **<u>Three</u>** different types of rendering effects
+5. Visualization effects based on <u>**rhythm and beat**</u>
 6. Converting polar coordinates to Cartesian coordinates using "**PVectors**"
 7. Design and implementation of mini-games with human-computer interaction (using the keyboard)
 
-
+|![An image](images/circle_render_2.jpg)|![An image](images/update_wave_render_1.png)|![An image](images/game_drop_render_3.jpg)|
+| :-----:| :----: | :----:|
 # Instructions
 ## Environment Setup and Code Execution
 - All code only uses libraries that are already included in the current project, no additional libraries have been added.
@@ -39,19 +40,32 @@ This is the youtube video link:xxx
 
 # How it works
 ## Overview
-This project mainly designs a **'C19124715Visual'** class inherited from **'Visual'** class, an abstract class (**'Render'**), and three visualization classes (**'RoundVisual', 'WaveVisual', 'DropVisual'**) derived from the Render class.
+This project mainly designs a **'D19124715Visual'** class inherited from **'Visual'** class, an abstract class (**'Render'**), and three visualization classes (**'RoundVisual', 'WaveVisual', 'DropVisual'**) derived from the Render class.
 
 **To explain how my project works, I will use some software engineering diagrams below.**
 ## Function Module Diagram and UML Class Diagram
 -  UML Class Diagram
 ![UML](images/UML_class_pic.png)
-As shown in the figure above, Render is an abstract class that has a render function. All classes of visualization modules will inherit from this class and override the render function. The C19124715Visual class has an array of render classes, and objects in this array can store any objects derived from the Render class.
+As shown in the figure above, Render is an abstract class that has a render function. All classes of visualization modules will inherit from this class and override the render function. The D19124715Visual class has an array of render classes, and objects in this array can store any objects derived from the Render class.
 
 
 - Function module diagram
 ![UML](images/module_pic.png)
 
-## Game design
+## Design Philosophy
+1. Module I(RoundVisual)
+    - Integrating the rhythm into music visualization, the size and color of the ball change with the beat, adding a sense of rhythm.
+    - Adopting a symmetric design can reduce the significant difference between high and low frequencies caused by the missing high frequency part, which is not aesthetically pleasing.
+2. Module II(WaveVisual)
+    - Plot the smoothed music waveform on an Archimedean spiral.
+    - Instead of coding the general equation of the spiral(equations below), I used PVector to convert the coordinate system. This allowed me to represent the Archimedean spiral using polar coordinates easily.
+3. Module III(DropVisual)
+Design rules for music block falling:
+    - The fall of the music block depends on the **beat**
+    - At the current time t, the probability of music blocks falling is p, where the larger the proportion of a certain frequency band at that time (the larger the area), the greater the probability (p value) of the block falling.
+    - The score is proportional to the area of the block caught.
+    - The blocks fall from the top at a certain acceleration rate.
+
 
 
 # What I am most proud of in the assignment
@@ -62,7 +76,7 @@ I learned about the greatness of the FFT algorithm, which not only applies to so
 
 Learn how to use Git and GitHub. Though done alone, I also learned how to use Git to control and archive versions. In the event of an unknown accident, it's possible to quickly revert to a stable version through Git revert, checkout, and reset operations.
 
-
+Implemented simple (but very useful) inheritance and polymorphism using Java. Have a preliminary understanding and exposure to design patterns.
 # Development Logs(Timeline)
 ### 3-15 First successful attempt at music visualization
 - Start experimenting with the Processing and Minin library
@@ -138,9 +152,21 @@ v3.render();
         - At the current time t, the probability of music blocks falling is p, where the larger the proportion of a certain frequency band at that time (the larger the area), the greater the probability (p value) of the block falling.
         - The score is proportional to the area of the block caught.
         - The blocks fall from the top at a certain acceleration rate.
+        
+|![An image](images/game_drop_render_1.jpg)|![An image](images/game_drop_render_2.jpg)|![An image](images/game_drop_render_3.jpg)|
+| :-----:| :----: | :----:|
+
 2. Change the design of the second visualization module (Time domain graph)
     - Use a spiral design instead of a tiled straight line.
     - Smooth the original waveform instead of using FFT.
+    - use the Archimedean spiral with the following polar coordinates equation: $r = a + b \cdot \theta$
+   
+Instead of coding the general equation of the spiral(equations below), I used PVector to convert the coordinate system. This allowed me to represent the Archimedean spiral using polar coordinates easily.
+    $$ \left.\begin{array}{l} { w _ { 0 } = \sqrt { x ^ { 2 } + \omega ^ { 2 } ( t + e ^ { 2 } } ) } \\ { v _ { r } = v \cos \omega + \omega ( t + \infty ) \sin a } \\ { s _ { 3 } = v \sin \omega + ( w ( t + c ) \cos a } \end{array}\right. $$
+    
+    
+|![An image](images/update_wave_render_1.png)|![An image](images/update_wave_render_2.jpg)|![An image](images/update_wave_render_3.jpg)|
+| :-----:| :----: | :----:|
 3. Optimization of polymorphism, implemented through a base class array for polymorphism.
 4. Documentation:
     1. draw two diagram using UML methods.
@@ -149,29 +175,5 @@ v3.render();
     4. Complete part of the \<***How it works***\> writing
 
 
-|![An image](images/game_drop_render_1.jpg)|![An image](images/game_drop_render_2.jpg)|![An image](images/game_drop_render_3.jpg)|
-| :-----:| :----: | :----:|
-<!--# Markdown Tutorial
 
-This is an image using a relative URL:
-
-![An image](images/p8.png)
-
-This is an image using an absolute URL:
-
-![A different image](https://bryanduggandotorg.files.wordpress.com/2019/02/infinite-forms-00045.png?w=595&h=&zoom=2)
-
-This is a youtube video:
-
-[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)
-
-This is a table:
-
-| Heading 1 | Heading 2 |
-|-----------|-----------|
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
-|Some stuff | Some more stuff in this column |
--->
-
+### 4-24 Final doc and code & record video
