@@ -11,12 +11,13 @@ Student Number: D19124715
 - There is an example visualiser called MyVisual in the example package
 - Check out the WaveForm and AudioBandsVisual for examples of how to call the Processing functions from other classes that are not subclasses of PApplet-->
 ## Youtube Video
-This is the youtube video link:xxx
-<!--[![YouTube](http://img.youtube.com/vi/J2kHSSFA4NU/0.jpg)](https://www.youtube.com/watch?v=J2kHSSFA4NU)-->
+
+[![YouTube](http://img.youtube.com/vi/vqJvy_KIWl0/3.jpg)](https://youtube.com/watch?v=vqJvy_KIWl0)
+
 
 
 # Description of the assignment
-## What I achieve:
+## What I achieve
 1. Use version control tool (**<u>Git</u>**) to independently complete this project
 2. Use <u>**polymorphism**</u> and **<u>inheritance</u>**
 3. Use Minim library to process music and Processing library for visualization
@@ -24,6 +25,7 @@ This is the youtube video link:xxx
 5. Visualization effects based on <u>**rhythm and beat**</u>
 6. Converting polar coordinates to Cartesian coordinates using "**PVectors**"
 7. Design and implementation of mini-games with human-computer interaction (using the keyboard)
+8. A Log was wrote to doucument all the development process(with timeline)
 
 |![An image](images/circle_render_2.jpg)|![An image](images/update_wave_render_1.png)|![An image](images/game_drop_render_3.jpg)|
 | :-----:| :----: | :----:|
@@ -45,12 +47,12 @@ This project mainly designs a **'D19124715Visual'** class inherited from **'Visu
 **To explain how my project works, I will use some software engineering diagrams below.**
 ## Function Module Diagram and UML Class Diagram
 -  UML Class Diagram
-![UML](images/UML_class_pic.png)
+![UML](images/UML_class_pic2.png)
 As shown in the figure above, Render is an abstract class that has a render function. All classes of visualization modules will inherit from this class and override the render function. The D19124715Visual class has an array of render classes, and objects in this array can store any objects derived from the Render class.
 
 
 - Function module diagram
-![UML](images/module_pic.png)
+![UML](images/module_pic2.png)
 
 ## Design Philosophy
 1. Module I(RoundVisual)

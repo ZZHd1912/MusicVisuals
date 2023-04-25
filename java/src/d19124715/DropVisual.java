@@ -67,7 +67,7 @@ public class DropVisual extends Render{
                     score += trans;
                     fallHeight[i] -= trans;
                 }
-                cv.fill(PApplet.map(i, 0, cv.getBands().length, 255, 0), 0, 255);
+                cv.fill(PApplet.map(fallHeight[i], 0, cv.height , 0, 255), 255, 255);
                 cv.rect(i * gap, pos_y[i], gap, fallHeight[i]);
             }
             cv.fill(PApplet.map(i, 0, cv.getBands().length, 255, 0), 255, 255);
